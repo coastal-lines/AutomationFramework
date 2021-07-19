@@ -1,0 +1,45 @@
+    public class MyTest
+    {
+        public void Test()
+        {
+            IWebDriver driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("https://en.wikipedia.org/wiki/Chromium_Embedded_Framework");
+            //IWebElement logo = driver.FindElement(By.CssSelector("img[alt='Chromium Embedded Framework Logo.png']"));
+            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            //IWebElement logo = wait.Until(e => e.FindElement(By.CssSelector("img[alt='Chromium Embedded Framework Logo.png']")));
+            //logo.Click();
+
+            var logo = new Element(driver, By.CssSelector("img[alt='Chromium Embedded Framework Logo.png']"));
+            logo.Click();
+
+            driver.Close();
+            driver.Dispose();
+        }
+
+        public class Element
+        {
+            private IWebElement _element;
+            private IWebDriver _driver;
+            private By _by;
+            private WebDriverWait _wait;
+
+            private const int DefaultWaitTimeoutSeconds = 60;
+
+            public Element(IWebDriver driver, By by)
+            {
+                _by = by;
+                _driver = driver;
+                _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DefaultWaitTimeoutSeconds));
+            }
+
+            private void InstantiateElement()
+            {
+                _element = _driver.FindElement(_by);
+            }
+
+            public void Click()
+            {
+                InstantiateElement();
+                _element.Click();
+            }
+        }
