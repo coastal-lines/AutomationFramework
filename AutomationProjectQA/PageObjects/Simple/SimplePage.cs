@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using AutomationProjectQA.Wrapers;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace AutomationProjectQA.PageObjects.Simple
 {
     public class SimplePage : BasicPage
     {
-        private readonly Element _elementPreviewContentHolder = new Element(By.ClassName("preview-content-holder"));
+        ///private readonly Element _elementPreviewContentHolder = new Element(By.ClassName("preview-content-holder"));
 
         public SimplePage(IWebDriver driver) : base(driver)
         {
