@@ -10,7 +10,5 @@ namespace AutomationProjectQA.PageObjects.Simple
         {
             this.driver = driver;
         }
-
-
     }
 }

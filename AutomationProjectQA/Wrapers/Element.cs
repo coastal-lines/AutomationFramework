@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using AutomationProjectQA.FrameworkCore.Driver;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 
@@ -13,11 +14,11 @@ namespace AutomationProjectQA.Wrapers
 
         private const int DefaultWaitTimeoutSeconds = 60;
 
-        public Element(IWebDriver driver, By by)
+        public Element(By by)
         {
             _by = by;
-            _driver = driver;
-            _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(DefaultWaitTimeoutSeconds));
+            _driver = DriverClass.GetDriver();
+            _wait = new WebDriverWait(DriverClass.GetDriver(), TimeSpan.FromSeconds(DefaultWaitTimeoutSeconds));
         }
 
         private void InstantiateElement()

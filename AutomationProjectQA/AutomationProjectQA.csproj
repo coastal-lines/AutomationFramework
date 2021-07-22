@@ -48,7 +48,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseFrameworkClass.cs" />
     <Compile Include="DriverCore\Driver\DriverClass.cs" />
     <Compile Include="PageObjects\BasicPage.cs" />
     <Compile Include="PageObjects\Simple\SimplePage.cs" />

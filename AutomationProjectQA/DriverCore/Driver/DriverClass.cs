@@ -1,19 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 namespace AutomationProjectQA.FrameworkCore.Driver
 {
-    public class DriverClass : BaseFrameworkClass
+    public static class DriverClass
     {
-        private IWebDriver driver;
+        private static IWebDriver driver;
 
+        public static IWebDriver GetDriver()
+        {
+            if (driver == null)
+            {
+                driver = CreateDriver();
+            }
 
-        public IWebDriver GetDriver()
+            return driver;
+        }
+
+        private static IWebDriver CreateDriver()
         {
             if (driver == null)
             {
