@@ -6,25 +6,25 @@ using System.Collections.Generic;
 
 namespace AutomationProjectQA.Wrapers
 {
-    public class ElementList
+    public class ElementList : Element
     {
-        private IList<Element> _element;
+        private IList<Element> _listElement;
         private IWebDriver _driver;
         private By _by;
-        private WebDriverWait _wait;
-
-        private const int DefaultWaitTimeoutSeconds = 60;
 
         public ElementList(By by)
         {
             _by = by;
             _driver = DriverClass.GetDriver();
-            _wait = new WebDriverWait(DriverClass.GetDriver(), TimeSpan.FromSeconds(DefaultWaitTimeoutSeconds));
         }
 
-        private void InstantiateElement()
+        private void InstantiateElements()
         {
-            _element = _driver.FindElements(_by);
+            foreach(var element in _driver.FindElements(_by))
+            {
+                var _element = new Element(_by);
+                _listElement.Add(_element);
+            }
         }
     }
 }

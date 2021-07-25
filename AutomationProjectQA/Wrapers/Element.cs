@@ -14,6 +14,11 @@ namespace AutomationProjectQA.Wrapers
 
         private const int DefaultWaitTimeoutSeconds = 60;
 
+        public Element()
+        {
+
+        }
+
         public Element(By by)
         {
             _by = by;
