@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutomationProjectQA;
+using AutomationProjectQA.FrameworkCore.Driver;
 using NUnit.Framework;
 using OpenQA.Selenium;
 
@@ -13,6 +14,7 @@ namespace TestsProject
     {
         private IWebDriver driver;
 
+        /*
         public IWebDriver GetDriver()
         {
             if (driver == null)
@@ -22,12 +24,13 @@ namespace TestsProject
 
             return driver;
         }
-
+        */
+        /*
         public void InitDriver()
         {
-            driver = BaseFrameworkClass.CreateDriver();
+            driver = DriverClass.CreateDriver();
         }
-
+        */
         [TearDown]
         public void CleanDriver()
         {

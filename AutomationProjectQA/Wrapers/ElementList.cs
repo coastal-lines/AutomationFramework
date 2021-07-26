@@ -16,11 +16,12 @@ namespace AutomationProjectQA.Wrapers
         {
             _by = by;
             _driver = DriverClass.GetDriver();
+            InstantiateElements();
         }
 
         private void InstantiateElements()
         {
-            foreach(var element in _driver.FindElements(_by))
+            foreach (var element in _driver.FindElements(_by))
             {
                 var _element = new Element(_by);
                 _listElement.Add(_element);
