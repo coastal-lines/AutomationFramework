@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutomationProjectQA;
-using AutomationProjectQA.FrameworkCore.Driver;
+﻿using AutomationProjectQA.FrameworkCore.Driver;
 using NUnit.Framework;
 using OpenQA.Selenium;
 

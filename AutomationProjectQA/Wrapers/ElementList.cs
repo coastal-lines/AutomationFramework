@@ -8,7 +8,7 @@ namespace AutomationProjectQA.Wrapers
 {
     public class ElementList : Element
     {
-        public IList<Element> _listElement;
+        public List<Element> _listElement;
         private IWebDriver _driver;
         private By _by;
 
@@ -21,6 +21,8 @@ namespace AutomationProjectQA.Wrapers
 
         private void InstantiateElements()
         {
+            _listElement = new List<Element>();
+
             foreach (var element in _driver.FindElements(_by))
             {
                 var _element = new Element(_by);

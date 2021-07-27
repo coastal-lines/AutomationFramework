@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace TestsProject
 {
-    [TestFixture]
     public class WikiTest : BaseTestsClass
     {
         [Test]
