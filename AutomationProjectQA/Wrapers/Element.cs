@@ -36,5 +36,11 @@ namespace AutomationProjectQA.Wrapers
             InstantiateElement();
             _element.Click();
         }
+
+        public string GetText()
+        {
+            InstantiateElement();
+            return _element.Text;
+        }
     }
 }

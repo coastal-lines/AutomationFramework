@@ -8,7 +8,7 @@ namespace AutomationProjectQA.Wrapers
 {
     public class ElementList : Element
     {
-        private IList<Element> _listElement;
+        public IList<Element> _listElement;
         private IWebDriver _driver;
         private By _by;
 

@@ -17,7 +17,7 @@ namespace AutomationProjectQA.FrameworkCore.Driver
             return driver;
         }
 
-        private static IWebDriver CreateDriver()
+        public static IWebDriver CreateDriver()
         {
             if (driver == null)
             {
