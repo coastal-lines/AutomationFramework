@@ -56,7 +56,7 @@
     <Compile Include="PageObjects\Simple\WikiPage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WaitingClasses\MainWaitingClass.cs" />
+    <Compile Include="Waiting\MainWaitingClass.cs" />
     <Compile Include="Wrapers\ElementList.cs" />
     <Compile Include="Wrapers\Element.cs" />
   </ItemGroup>
