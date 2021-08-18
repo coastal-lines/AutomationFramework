@@ -42,5 +42,11 @@ namespace AutomationProjectQA.Wrapers
             InstantiateElement();
             return _element.Text;
         }
+
+        public void SetText(string text)
+        {
+            InstantiateElement();
+            _element.SendKeys(text);
+        }
     }
 }
