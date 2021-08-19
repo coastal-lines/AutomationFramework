@@ -1,10 +1,11 @@
 ﻿using AutomationProjectQA.FrameworkCore.Driver;
+using AutomationProjectQA.HelpersMethods;
 using NUnit.Framework;
 using OpenQA.Selenium;
 
 namespace TestsProject
 {
-    public class BaseTestsClass
+    public class BaseTestsClass : Helpers
     {
         private IWebDriver driver;
 

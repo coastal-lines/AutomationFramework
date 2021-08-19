@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DriverCore\Driver\DriverClass.cs" />
+    <Compile Include="HelpersMethods\Helpers.cs" />
     <Compile Include="PageObjects\BasicPage.cs" />
     <Compile Include="PageObjects\Simple\WikiPage.cs" />
     <Compile Include="Program.cs" />
