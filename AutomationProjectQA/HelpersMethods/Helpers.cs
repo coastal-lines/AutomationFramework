@@ -1,4 +1,5 @@
 ﻿using AutomationProjectQA.FrameworkCore.Driver;
+using AutomationProjectQA.WaitingClasses;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AutomationProjectQA.HelpersMethods
 {
-    public class Helpers
+    public class Helpers : MainWaitingClass
     {
         #region For IFrames
 
