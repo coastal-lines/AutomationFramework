@@ -16,7 +16,6 @@ namespace AutomationProjectQA.Wrapers
         {
             _by = by;
             _driver = DriverClass.GetDriver();
-            InstantiateElements();
         }
 
         public By GetByFromListElements()
@@ -24,11 +23,15 @@ namespace AutomationProjectQA.Wrapers
             return _by;
         }
 
+        public List<Element> GetElementList()
+        {
+            InstantiateElements();
+            return _listElement;
+        }
+
         private void InstantiateElements()
         {
             _listElement = new List<Element>();
-
-            var r = _driver.FindElements(_by);
 
             foreach (var element in _driver.FindElements(_by))
             {
