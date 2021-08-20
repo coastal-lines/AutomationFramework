@@ -11,7 +11,6 @@ namespace AutomationProjectQA.Wrapers
         private IWebElement _element;
         private IWebDriver _driver;
         private By _by;
-        //private WebDriverWait _wait;
 
         private const int DefaultWaitTimeoutSeconds = 60;
 
@@ -24,7 +23,11 @@ namespace AutomationProjectQA.Wrapers
         {
             _by = by;
             _driver = DriverClass.GetDriver();
-            //_wait = new WebDriverWait(DriverClass.GetDriver(), TimeSpan.FromSeconds(DefaultWaitTimeoutSeconds));
+        }
+
+        public By GetByElement()
+        {
+            return _by;
         }
 
         private void InstantiateElement()
@@ -56,7 +59,5 @@ namespace AutomationProjectQA.Wrapers
             InstantiateElement();
             _element.SendKeys(text);
         }
-
-
     }
 }

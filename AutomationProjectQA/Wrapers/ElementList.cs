@@ -19,9 +19,16 @@ namespace AutomationProjectQA.Wrapers
             InstantiateElements();
         }
 
+        public By GetByFromListElements()
+        {
+            return _by;
+        }
+
         private void InstantiateElements()
         {
             _listElement = new List<Element>();
+
+            var r = _driver.FindElements(_by);
 
             foreach (var element in _driver.FindElements(_by))
             {
