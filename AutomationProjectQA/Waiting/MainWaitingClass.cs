@@ -21,5 +21,31 @@ namespace AutomationProjectQA.WaitingClasses
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(waitingTime));
             wait.Until(ExpectedConditions.ElementExists(by));
         }
+
+        public void WaitElementDisplayed(By by)
+        {
+            try
+            {
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(waitingTime));
+                wait.Until(ExpectedConditions.ElementIsVisible(by));
+            }
+            catch (NoSuchElementException err)
+            {
+                Console.WriteLine("Element with locator '" + by + "' is not displayed");
+            }
+        }
+
+        public void WaitElementDisappear(By by, int waitingTime = 30)
+        {
+            try
+            {
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(waitingTime));
+                wait.Until(ExpectedConditions.InvisibilityOfElementLocated(by));
+            }
+            catch (NoSuchElementException err)
+            {
+                Console.WriteLine("Element with locator '" + by + "' is displayed");
+            }
+        }
     }
 }
