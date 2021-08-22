@@ -1,6 +1,7 @@
 ﻿using AutomationProjectQA.FrameworkCore.Driver;
 using OpenQA.Selenium;
 using AutomationProjectQA.HelpersMethods;
+using System;
 
 namespace AutomationProjectQA.Wrapers
 {
@@ -36,10 +37,16 @@ namespace AutomationProjectQA.Wrapers
 
         public Element Wait(WaitMethods condition)
         {
-            switch (condition)
+            switch (Int32.Parse(condition.ToString()))
             {
                 case 0:
                     WaitElement(this._by);
+                    break;
+                case 1:
+                    WaitElementDisplayed(this._by);
+                    break;
+                case 2:
+                    WaitElementDisappear(this._by);
                     break;
             }
 

@@ -4,8 +4,9 @@
     {
         public enum WaitMethods
         {
-            Wait,
-            WaitDisplayed
+            Wait = 0,
+            WaitDisplayed = 1,
+            WaitDisappear = 2
         }
     }
 }
