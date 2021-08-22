@@ -30,6 +30,11 @@ namespace AutomationProjectQA.Wrapers
             return _by;
         }
 
+        public IWebElement test()
+        {
+            return _driver.FindElement(_by);
+        }
+
         private void InstantiateElement()
         {
             _element = _driver.FindElement(_by);
