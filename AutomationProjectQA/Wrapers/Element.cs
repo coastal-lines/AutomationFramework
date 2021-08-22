@@ -1,7 +1,5 @@
 ﻿using AutomationProjectQA.FrameworkCore.Driver;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using System;
 using AutomationProjectQA.HelpersMethods;
 
 namespace AutomationProjectQA.Wrapers
@@ -36,6 +34,18 @@ namespace AutomationProjectQA.Wrapers
             return this;
         }
 
+        public Element Wait(WaitMethods condition)
+        {
+            switch (condition)
+            {
+                case 0:
+                    WaitElement(this._by);
+                    break;
+            }
+
+            return this;
+        }
+
         public void Click()
         {
             _element.Click();
@@ -43,7 +53,7 @@ namespace AutomationProjectQA.Wrapers
 
         public void WaitElemntAndClick()
         {
-            WaitElement(_driver, _by);
+            WaitElement(_by);
             _element.Click();
         }
 
