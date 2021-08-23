@@ -7,6 +7,8 @@ namespace AutomationProjectQA.HelpersMethods
 {
     public class ElementActions : JavaScriptExecutorClass
     {
+        #region Selenium actions
+        
         public void ClickBySelenium(IWebElement element)
         {
             element.Click();
@@ -43,11 +45,33 @@ namespace AutomationProjectQA.HelpersMethods
             new Actions(DriverClass.GetDriver()).MoveToElement(element).Build().Perform();
         }
 
+        public void SendKeysBySelenium(IWebElement element, string text)
+        {
+            element.SendKeys(text);
+        }
+
         public Point GetElementCoordinatesBySelenium(IWebElement element)
         {
             return element.Location;
         }
 
+        #endregion
+
+        #region Windows cupboard
+
+        //TODO
+        public void CopyToWindowsCupboard()
+        {
+
+        }
+
+        //TODO
+        public void PastFromWindowsCupboard()
+        {
+
+        }
+
+        #endregion
 
     }
 }
