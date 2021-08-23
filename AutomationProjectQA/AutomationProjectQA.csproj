@@ -54,6 +54,7 @@
     <Compile Include="DriverCore\Driver\DriverClass.cs" />
     <Compile Include="HelpersMethods\ElementActions.cs" />
     <Compile Include="HelpersMethods\Helpers.cs" />
+    <Compile Include="HelpersMethods\JavaScriptExecutorClass.cs" />
     <Compile Include="PageObjects\BasicPage.cs" />
     <Compile Include="PageObjects\Simple\WikiPage.cs" />
     <Compile Include="Program.cs" />

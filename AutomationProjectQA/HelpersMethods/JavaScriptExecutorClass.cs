@@ -1,0 +1,19 @@
+﻿using AutomationProjectQA.FrameworkCore.Driver;
+using OpenQA.Selenium;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AutomationProjectQA.HelpersMethods
+{
+    public class JavaScriptExecutorClass
+    {
+        public void RunJavaScript(string script)
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor) DriverClass.GetDriver();
+            var result = (string) js.ExecuteScript(script);
+        }
+    }
+}
