@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace AutomationProjectQA.HelpersMethods
+{
+    public class RegExp
+    {
+        public string MakeRegExp(string text, string pattern, int group = 0)
+        {
+            Regex rx = new Regex(pattern);
+            MatchCollection matches = rx.Matches(text);
+
+            return matches[group].Value;
+        }
+    }
+}
