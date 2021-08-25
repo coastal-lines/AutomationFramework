@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace AutomationProjectQA.HelpersMethods
 {
@@ -73,5 +74,23 @@ namespace AutomationProjectQA.HelpersMethods
 
         #endregion
 
+        #region Windows actions
+
+        public void WindowsCtrlA()
+        {
+            SendKeys.SendWait("^{A}");
+        }
+
+        public void WindowsCtrlC()
+        {
+            SendKeys.SendWait("^{C}");
+        }
+
+        public void WindowsCtrlV()
+        {
+            SendKeys.SendWait("^{V}");
+        }
+
+        #endregion
     }
 }
