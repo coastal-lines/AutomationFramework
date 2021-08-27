@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DriverCore\Driver\DriverClass.cs" />
+    <Compile Include="HelpersMethods\AppConfigParameters.cs" />
     <Compile Include="HelpersMethods\ElementActions.cs" />
     <Compile Include="HelpersMethods\Helpers.cs" />
     <Compile Include="HelpersMethods\JavaScriptExecutorClass.cs" />
