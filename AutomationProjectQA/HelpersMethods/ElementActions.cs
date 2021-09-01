@@ -1,7 +1,9 @@
 ﻿using AutomationProjectQA.FrameworkCore.Driver;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using System;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace AutomationProjectQA.HelpersMethods
@@ -58,18 +60,49 @@ namespace AutomationProjectQA.HelpersMethods
 
         #endregion
 
-        #region Windows cupboard
+        #region Windows clipboard
 
-        //TODO
-        public void CopyToWindowsCupboard()
+        public void CopyToWindowsClipboard()
         {
-
+            WindowsCtrlA();
+            Thread.Sleep(100);
+            WindowsCtrlC();
+            Thread.Sleep(1000);
         }
 
         //TODO
-        public void PastFromWindowsCupboard()
+        //Add explanation
+        public string PastFromWindowsClipboard()
         {
+            var text = "";
+            text = Clipboard.GetText(TextDataFormat.Text);
 
+            if (text == "")
+            {
+                IDataObject idat = null;
+                Exception threadEx = null;
+
+                Thread staThread = new Thread(
+                    delegate ()
+                    {
+                        try
+                        {
+                            idat = Clipboard.GetDataObject();
+                            text = (string)idat.GetData(DataFormats.Text);
+
+                        }
+
+                        catch (Exception ex)
+                        {
+                            threadEx = ex;
+                        }
+                    });
+                staThread.SetApartmentState(ApartmentState.STA);
+                staThread.Start();
+                staThread.Join();
+            }
+
+            return text;
         }
 
         #endregion

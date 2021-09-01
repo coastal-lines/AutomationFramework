@@ -1,10 +1,5 @@
 ﻿using AutomationProjectQA.FrameworkCore.Driver;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutomationProjectQA.HelpersMethods
 {
@@ -14,6 +9,14 @@ namespace AutomationProjectQA.HelpersMethods
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor) DriverClass.GetDriver();
             var result = (string) js.ExecuteScript(script);
+        }
+
+        public string RunJavaScriptAndGetResult(string script)
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)DriverClass.GetDriver();
+            var result = (string)js.ExecuteScript(script);
+
+            return result;
         }
     }
 }
