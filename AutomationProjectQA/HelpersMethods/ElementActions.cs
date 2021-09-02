@@ -89,7 +89,6 @@ namespace AutomationProjectQA.HelpersMethods
                         {
                             idat = Clipboard.GetDataObject();
                             text = (string)idat.GetData(DataFormats.Text);
-
                         }
 
                         catch (Exception ex)
