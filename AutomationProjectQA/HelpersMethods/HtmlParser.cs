@@ -20,9 +20,13 @@ namespace AutomationProjectQA.HelpersMethods
             return doc;
         }
 
-        public string GetTextBySelector(string)
+        public string GetTextBySelector(HtmlDocument doc, string path)
         {
+            var value = doc.DocumentNode
+             .SelectNodes("//div")[1]
+             .Attributes["id"].Value;
 
+            return value;
         }
     }
 }
