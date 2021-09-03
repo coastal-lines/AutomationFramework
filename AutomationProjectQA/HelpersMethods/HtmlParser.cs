@@ -1,24 +1,28 @@
 ﻿using HtmlAgilityPack;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutomationProjectQA.HelpersMethods
 {
     public class HtmlParser
     {
-        public string ReadHtmlFromText(string html)
+        public HtmlDocument ReadHtmlFromText(string html)
         {
             var doc = new HtmlDocument();
             doc.LoadHtml(html);
+
+            return doc;
         }
 
-        public string ReadHtmlFromFile(string filePath)
+        public HtmlDocument ReadHtmlFromFile(string filePath)
         {
             var doc = new HtmlDocument();
             doc.Load(filePath);
+
+            return doc;
+        }
+
+        public string GetTextBySelector(string)
+        {
+
         }
     }
 }
