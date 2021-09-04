@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 
 namespace AutomationProjectQA.HelpMethods
 {
-    public class Helpers : MainWaitingClass
+    public class ElementHelpers : MainWaitingClass
     {
         #region For IFrames
 

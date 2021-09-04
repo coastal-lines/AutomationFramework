@@ -5,7 +5,7 @@ using System;
 
 namespace AutomationProjectQA.Wrapers
 {
-    public class Element : Helpers
+    public class Element : ElementHelpers
     {
         private IWebElement _element;
         private IWebDriver _driver;

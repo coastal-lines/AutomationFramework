@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 
 namespace TestsProject
 {
-    public class BaseTestsClass : Helpers
+    public class BaseTestsClass : ElementHelpers
     {
         private IWebDriver driver;
 
