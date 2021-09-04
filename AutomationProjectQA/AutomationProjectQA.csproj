@@ -63,6 +63,7 @@
     <Compile Include="HelpMethods\HtmlParser.cs" />
     <Compile Include="HelpMethods\JavaScriptExecutorClass.cs" />
     <Compile Include="HelpMethods\RegExp.cs" />
+    <Compile Include="HelpMethods\XmlParser.cs" />
     <Compile Include="PageObjects\BasicPage.cs" />
     <Compile Include="PageObjects\Simple\WikiPage.cs" />
     <Compile Include="Program.cs" />
