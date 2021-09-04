@@ -1,7 +1,7 @@
 ﻿using AutomationProjectQA.FrameworkCore.Driver;
 using OpenQA.Selenium;
 
-namespace AutomationProjectQA.HelpersMethods
+namespace AutomationProjectQA.HelpMethods
 {
     public class JavaScriptExecutorClass
     {

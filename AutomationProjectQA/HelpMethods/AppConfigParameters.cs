@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace AutomationProjectQA.HelpersMethods
+namespace AutomationProjectQA.HelpMethods
 {
     public static class AppConfigParameters
     {

@@ -1,5 +1,5 @@
 ﻿using AutomationProjectQA.FrameworkCore.Driver;
-using AutomationProjectQA.HelpersMethods;
+using AutomationProjectQA.HelpMethods;
 using NUnit.Framework;
 using OpenQA.Selenium;
 

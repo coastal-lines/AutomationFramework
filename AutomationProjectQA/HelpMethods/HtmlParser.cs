@@ -1,6 +1,6 @@
 ﻿using HtmlAgilityPack;
 
-namespace AutomationProjectQA.HelpersMethods
+namespace AutomationProjectQA.HelpMethods
 {
     public class HtmlParser
     {

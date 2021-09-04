@@ -2,7 +2,7 @@
 using AutomationProjectQA.WaitingClasses;
 using OpenQA.Selenium;
 
-namespace AutomationProjectQA.HelpersMethods
+namespace AutomationProjectQA.HelpMethods
 {
     public class Helpers : MainWaitingClass
     {

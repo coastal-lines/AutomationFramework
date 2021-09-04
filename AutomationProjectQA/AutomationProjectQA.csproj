@@ -57,12 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DriverCore\Driver\DriverClass.cs" />
-    <Compile Include="HelpersMethods\AppConfigParameters.cs" />
-    <Compile Include="HelpersMethods\ElementActions.cs" />
-    <Compile Include="HelpersMethods\Helpers.cs" />
-    <Compile Include="HelpersMethods\HtmlParser.cs" />
-    <Compile Include="HelpersMethods\JavaScriptExecutorClass.cs" />
-    <Compile Include="HelpersMethods\RegExp.cs" />
+    <Compile Include="HelpMethods\AppConfigParameters.cs" />
+    <Compile Include="HelpMethods\ElementActions.cs" />
+    <Compile Include="HelpMethods\Helpers.cs" />
+    <Compile Include="HelpMethods\HtmlParser.cs" />
+    <Compile Include="HelpMethods\JavaScriptExecutorClass.cs" />
+    <Compile Include="HelpMethods\RegExp.cs" />
     <Compile Include="PageObjects\BasicPage.cs" />
     <Compile Include="PageObjects\Simple\WikiPage.cs" />
     <Compile Include="Program.cs" />

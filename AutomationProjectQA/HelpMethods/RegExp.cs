@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace AutomationProjectQA.HelpersMethods
+namespace AutomationProjectQA.HelpMethods
 {
     public class RegExp
     {

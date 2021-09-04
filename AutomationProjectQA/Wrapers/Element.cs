@@ -1,6 +1,6 @@
 ﻿using AutomationProjectQA.FrameworkCore.Driver;
 using OpenQA.Selenium;
-using AutomationProjectQA.HelpersMethods;
+using AutomationProjectQA.HelpMethods;
 using System;
 
 namespace AutomationProjectQA.Wrapers

@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace AutomationProjectQA.HelpersMethods
+namespace AutomationProjectQA.HelpMethods
 {
     public class ElementActions : JavaScriptExecutorClass
     {
