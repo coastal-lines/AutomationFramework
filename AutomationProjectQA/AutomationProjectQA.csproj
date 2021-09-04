@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="DriverCore\Driver\DriverClass.cs" />
     <Compile Include="HelpMethods\AppConfigParameters.cs" />
-    <Compile Include="HelpMethods\ElementActions.cs" />
+    <Compile Include="ElementCore\ElementActions.cs" />
     <Compile Include="HelpMethods\Helpers.cs" />
     <Compile Include="HelpMethods\HtmlParser.cs" />
     <Compile Include="HelpMethods\JavaScriptExecutorClass.cs" />

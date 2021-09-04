@@ -1,4 +1,5 @@
 ﻿using AutomationProjectQA.FrameworkCore.Driver;
+using AutomationProjectQA.HelpMethods;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using System;
@@ -6,7 +7,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace AutomationProjectQA.HelpMethods
+namespace AutomationProjectQA.ElementCore
 {
     public class ElementActions : JavaScriptExecutorClass
     {
