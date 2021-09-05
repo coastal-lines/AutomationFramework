@@ -37,10 +37,17 @@
     <Reference Include="HtmlAgilityPack, Version=1.11.36.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.11.36\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.12.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.12.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,14 +63,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiModels\DemoApiModel.cs" />
     <Compile Include="DriverCore\Driver\DriverClass.cs" />
-    <Compile Include="HelpMethods\AppConfigParameters.cs" />
+    <Compile Include="HelpMethods\ApiManager.cs" />
+    <Compile Include="HelpMethods\AppConfigManager.cs" />
     <Compile Include="ElementCore\ElementActions.cs" />
     <Compile Include="ElementCore\ElementHelpers.cs" />
+    <Compile Include="HelpMethods\Base64Helper.cs" />
     <Compile Include="HelpMethods\HelpMethodsClass.cs" />
     <Compile Include="HelpMethods\HtmlParser.cs" />
     <Compile Include="HelpMethods\JavaScriptExecutorClass.cs" />
     <Compile Include="HelpMethods\RegExp.cs" />
+    <Compile Include="HelpMethods\SqlManager.cs" />
     <Compile Include="HelpMethods\XmlParser.cs" />
     <Compile Include="PageObjects\BasicPage.cs" />
     <Compile Include="PageObjects\Simple\WikiPage.cs" />
