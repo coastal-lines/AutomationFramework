@@ -5,26 +5,26 @@ namespace AutomationProjectQA.FrameworkCore.Driver
 {
     public static class DriverClass
     {
-        private static IWebDriver driver;
+        private static IWebDriver seleniumChromeDriver;
 
-        public static IWebDriver GetDriver()
+        public static IWebDriver GetSeleniumChromeDriver()
         {
-            if (driver == null)
+            if (seleniumChromeDriver == null)
             {
-                driver = CreateDriver();
+                seleniumChromeDriver = CreateSeleniumChromeDriver();
             }
 
-            return driver;
+            return seleniumChromeDriver;
         }
 
-        public static IWebDriver CreateDriver()
+        public static IWebDriver CreateSeleniumChromeDriver()
         {
-            if (driver == null)
+            if (seleniumChromeDriver == null)
             {
-                driver = new ChromeDriver();
+                seleniumChromeDriver = new ChromeDriver();
             }
 
-            return driver;
+            return seleniumChromeDriver;
         }
     }
 }

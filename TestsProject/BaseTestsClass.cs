@@ -22,7 +22,7 @@ namespace TestsProject
         [SetUp]
         public void InitDriver()
         {
-            driver = DriverClass.CreateDriver();
+            driver = DriverClass.CreateSeleniumChromeDriver();
         }
 
         [TearDown]
