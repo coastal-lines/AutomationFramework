@@ -2,9 +2,9 @@
 
 namespace AutomationProjectQA.HelpMethods
 {
-    public static class AppConfigParameters
+    public class AppConfigParameters
     {
-        public static string GetDefaultBrowser()
+        public string GetDefaultBrowser()
         {
             return ConfigurationManager.AppSettings["defaultBrowser"].ToString();
         }
