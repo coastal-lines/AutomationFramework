@@ -47,5 +47,10 @@ namespace AutomationProjectQA.HelpMethods
 
             return reader;
         }
+
+        public void CloseConnection()
+        {
+            this.connection.Close();
+        }
     }
 }
