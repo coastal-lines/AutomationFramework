@@ -1,11 +1,6 @@
 ﻿using AutomationProjectQA.Wrapers;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TestsProject
 {
@@ -14,13 +9,22 @@ namespace TestsProject
         [Test]
         public void JustTest()
         {
-            GetDriver().Navigate().GoToUrl("https://en.wikipedia.org/wiki/Chromium_Embedded_Framework");
-            var logo = new Element(By.CssSelector("img[alt='Chromium Embedded Framework Logo.png']"));
-            var listProducts = new ElementList(By.XPath("//div[@class='mw-parser-output']/ul[1]/li"));
-            foreach (var item in listProducts._listElement)
-            {
-                Console.WriteLine(item.GetText());
-            }
+            GetDriver().Navigate().GoToUrl("https://mail.rambler.ru/");
+            var login = new Element(By.Id("login"));
+            var password = new Element(By.Id("password"));
+            var enter = new Element(By.ClassName("rui-Button-content"));
+            SwitchToTheFirstIFrame();
+            login.Wait(WaitMethods.Wait).InstantiateElement().Click();
+            login.SetText("");
+            password.InstantiateElement().Click();
+            password.SetText("");
+            enter.InstantiateElement().Click();
+
+            var list = new ElementList(By.CssSelector("div[class='MailList-list-2L'] div[draggable='true']"));
+            WaitElement(list.GetByFromListElements());
+            Assert.IsTrue(list.GetElementList().Count > 10, "");
+
+
         }
     }
 }

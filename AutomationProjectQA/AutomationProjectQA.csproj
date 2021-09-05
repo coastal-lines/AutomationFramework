@@ -65,17 +65,20 @@
   <ItemGroup>
     <Compile Include="ApiModels\DemoApiModel.cs" />
     <Compile Include="DriverCore\Driver\DriverClass.cs" />
-    <Compile Include="HelpMethods\ApiManager.cs" />
-    <Compile Include="HelpMethods\AppConfigManager.cs" />
+    <Compile Include="HelpMethods\Api\ApiManager.cs" />
+    <Compile Include="HelpMethods\Constants\AppConfigManager.cs" />
     <Compile Include="ElementCore\ElementActions.cs" />
     <Compile Include="ElementCore\ElementHelpers.cs" />
-    <Compile Include="HelpMethods\Base64Helper.cs" />
+    <Compile Include="HelpMethods\Text\Base64Helper.cs" />
     <Compile Include="HelpMethods\HelpMethodsClass.cs" />
-    <Compile Include="HelpMethods\HtmlParser.cs" />
-    <Compile Include="HelpMethods\JavaScriptExecutorClass.cs" />
-    <Compile Include="HelpMethods\RegExp.cs" />
-    <Compile Include="HelpMethods\SqlManager.cs" />
-    <Compile Include="HelpMethods\XmlParser.cs" />
+    <Compile Include="HelpMethods\Parsers\HtmlParser.cs" />
+    <Compile Include="HelpMethods\Javascript\JavaScriptExecutorClass.cs" />
+    <Compile Include="HelpMethods\Text\RegExp.cs" />
+    <Compile Include="HelpMethods\Sql\SqlManager.cs" />
+    <Compile Include="HelpMethods\Parsers\XmlParser.cs" />
+    <Compile Include="HelpMethods\VisualTools\ImageHelper.cs" />
+    <Compile Include="HelpMethods\VisualTools\ReadTextFromImage.cs" />
+    <Compile Include="HelpMethods\VisualTools\SikuliManager.cs" />
     <Compile Include="PageObjects\BasicPage.cs" />
     <Compile Include="PageObjects\Simple\WikiPage.cs" />
     <Compile Include="Program.cs" />
@@ -89,7 +92,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="HelpMethods\FilesManagement\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.91.0.4472.10100\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.91.0.4472.10100\build\Selenium.WebDriver.ChromeDriver.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
