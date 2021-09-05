@@ -1,6 +1,6 @@
 ﻿namespace AutomationProjectQA.HelpMethods
 {
-    internal class HelpMethodsClass
+    public class HelpMethodsClass
     {
         private AppConfigParameters _appConfigParameters;
         private HtmlParser _htmlParser;

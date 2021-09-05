@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace AutomationProjectQA.ElementCore
 {
-    public class ElementActions : JavaScriptExecutorClass
+    public class ElementActions : HelpMethodsClass
     {
         #region Selenium actions
         
@@ -41,7 +41,7 @@ namespace AutomationProjectQA.ElementCore
         public void ScrollBySelenium(int x, int y)
         {
             string script = $"window.scroll({x}, {y});";
-            RunJavaScript(script);
+            javaScriptExecutorClass.RunJavaScript(script);
         }
 
         public void MoveCursorOnElementBySelenium(IWebElement element)
