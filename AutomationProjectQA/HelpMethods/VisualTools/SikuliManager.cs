@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutomationProjectQA.HelpMethods.VisualTools
 {
-    class SikuliManager
+    public class SikuliManager
     {
     }
 }
