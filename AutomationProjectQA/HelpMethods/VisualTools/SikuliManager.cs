@@ -13,8 +13,16 @@ namespace AutomationProjectQA.HelpMethods.VisualTools
         {
             var im3 = Patterns.FromFile(@"C:\\Sikuli\WrongSpellingWord7.png", 0.9f);
             var session = Sikuli.CreateSession();
-            var match = session.Find(im3);
-            var region = new SikuliSharp.Region(match.GetX(), match.GetY(), match.GetW(), match.GetH());
+        }
+
+        public Match FindMatch(ISikuliSession session, IPattern pattern)
+        {
+            var match = session.Find(pattern);
+            return match;
+        }
+
+        public void HighlightRegion(ISikuliSession session, Region region)
+        {
             session.Highlight(region, "Green");
         }
     }
