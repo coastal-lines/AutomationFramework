@@ -21,9 +21,9 @@ namespace AutomationProjectQA.HelpMethods.VisualTools
             session.Highlight(region, "Green");
         }
 
-        public IPattern GetPattern(float similarity = 0.9f)
+        public IPattern GetPattern(string filePath, float similarity = 0.9f)
         {
-            var pattern = Patterns.FromFile(@"C:\\Sikuli\WrongSpellingWord7.png", similarity);
+            var pattern = Patterns.FromFile(filePath, similarity);
             return pattern;
         }
 
