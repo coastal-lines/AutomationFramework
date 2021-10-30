@@ -91,6 +91,7 @@
     <Compile Include="ElementCore\ElementActions.cs" />
     <Compile Include="ElementCore\ElementHelpers.cs" />
     <Compile Include="HelpMethods\FilesManagement\FilesManager.cs" />
+    <Compile Include="HelpMethods\Office\CSV.cs" />
     <Compile Include="HelpMethods\Office\Excel.cs" />
     <Compile Include="HelpMethods\Text\Base64Helper.cs" />
     <Compile Include="HelpMethods\HelpMethodsClass.cs" />
