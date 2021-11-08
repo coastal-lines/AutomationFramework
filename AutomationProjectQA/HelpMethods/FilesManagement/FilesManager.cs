@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace AutomationProjectQA.HelpMethods.FilesManagement
 {
@@ -32,6 +33,26 @@ namespace AutomationProjectQA.HelpMethods.FilesManagement
             }
 
             return text;
+        }
+
+        public List<string> ReadTextFileAsList(string filePath)
+        {
+            var listText = new List<string>();
+
+            try
+            {
+                listText = File.ReadAllLines(filePath).ToList();
+            }
+            catch (FileNotFoundException errorMsg)
+            {
+                Console.WriteLine("Exception: " + errorMsg.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+
+            return listText;
         }
 
         public void SaveTxtFile(string filePath, string text)
