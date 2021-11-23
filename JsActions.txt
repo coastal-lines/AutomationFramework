@@ -1,0 +1,7 @@
+        public bool IsScrollBarPresentedJS()
+        {
+            var jsExecutor = Driver as IJavaScriptExecutor;
+            string result = Convert.ToString(jsExecutor.ExecuteScript(@"let nda = document.querySelector('.confirmation-container'); return nda.clientHeight < nda.scrollHeight;"));
+
+            return Boolean.Parse(result);
+        }
