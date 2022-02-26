@@ -20,22 +20,22 @@ namespace AutomationProjectQA.ElementCore
 
         public void RightClickBySelenium(IWebElement element)
         {
-            new Actions(DriverClass.GetDriver()).ContextClick(element).Build().Perform();
+            new Actions(StaticDriverClass.GetSeleniumChromeDriver()).ContextClick(element).Build().Perform();
         }
 
         public void DoubleClickBySelenium(IWebElement element)
         {
-            new Actions(DriverClass.GetDriver()).DoubleClick(element).Build().Perform();
+            new Actions(StaticDriverClass.GetSeleniumChromeDriver()).DoubleClick(element).Build().Perform();
         }
 
         public void DragAndDropBySelenium(IWebElement elementSource, IWebElement elementTarget)
         {
-            new Actions(DriverClass.GetDriver()).DragAndDrop(elementSource, elementTarget).Build().Perform();
+            new Actions(StaticDriverClass.GetSeleniumChromeDriver()).DragAndDrop(elementSource, elementTarget).Build().Perform();
         }
 
         public void DragAndDropByCoordinatesBySelenium(IWebElement elementSource, int x, int y)
         {
-            new Actions(DriverClass.GetDriver()).DragAndDropToOffset(elementSource, x, y).Build().Perform();
+            new Actions(StaticDriverClass.GetSeleniumChromeDriver()).DragAndDropToOffset(elementSource, x, y).Build().Perform();
         }
 
         public void ScrollBySelenium(int x, int y)
@@ -46,7 +46,7 @@ namespace AutomationProjectQA.ElementCore
 
         public void MoveCursorOnElementBySelenium(IWebElement element)
         {
-            new Actions(DriverClass.GetDriver()).MoveToElement(element).Build().Perform();
+            new Actions(StaticDriverClass.GetSeleniumChromeDriver()).MoveToElement(element).Build().Perform();
         }
 
         public void SendKeysBySelenium(IWebElement element, string text)

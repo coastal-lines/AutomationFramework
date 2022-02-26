@@ -2,6 +2,7 @@
 using AutomationProjectQA.Waiting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
 
 namespace AutomationProjectQA.WaitingClasses
@@ -13,7 +14,7 @@ namespace AutomationProjectQA.WaitingClasses
 
         public MainWaitingClass()
         {
-            this.driver = DriverClass.GetDriver();
+            this.driver = StaticDriverClass.GetSeleniumChromeDriver();
         }
 
         public void WaitElement(By by)

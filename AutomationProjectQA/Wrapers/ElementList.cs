@@ -13,7 +13,7 @@ namespace AutomationProjectQA.Wrapers
         public ElementList(By by)
         {
             _by = by;
-            _driver = DriverClass.GetDriver();
+            _driver = StaticDriverClass.GetSeleniumChromeDriver();
         }
 
         public By GetByFromListElements()

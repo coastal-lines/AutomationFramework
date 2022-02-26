@@ -10,14 +10,14 @@ namespace AutomationProjectQA.HelpMethods
 
         public void SwitchToTheFirstIFrame()
         {
-            var iframe = DriverClass.GetDriver().FindElement(By.XPath("//iframe[1]"));
-            DriverClass.GetDriver().SwitchTo().Frame(0);
+            var iframe = StaticDriverClass.GetSeleniumChromeDriver().FindElement(By.XPath("//iframe[1]"));
+            StaticDriverClass.GetSeleniumChromeDriver().SwitchTo().Frame(0);
         }
 
         public void SwitchToIFrame(string iframeXPath)
         {
-            var iframeElement = DriverClass.GetDriver().FindElement(By.XPath("//" + iframeXPath));
-            DriverClass.GetDriver().SwitchTo().Frame(iframeElement);
+            var iframeElement = StaticDriverClass.GetSeleniumChromeDriver().FindElement(By.XPath("//" + iframeXPath));
+            StaticDriverClass.GetSeleniumChromeDriver().SwitchTo().Frame(iframeElement);
         }
 
         #endregion

@@ -21,7 +21,7 @@ namespace AutomationProjectQA.Wrapers
         public Element(By by)
         {
             _by = by;
-            _driver = DriverClass.GetDriver();
+            _driver = StaticDriverClass.GetSeleniumChromeDriver();
         }
 
         public By GetByElement()

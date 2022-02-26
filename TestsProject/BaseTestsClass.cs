@@ -9,6 +9,7 @@ namespace TestsProject
     {
         private IWebDriver driver;
 
+        /*
         public IWebDriver GetDriver()
         {
             if (driver == null)
@@ -18,7 +19,9 @@ namespace TestsProject
 
             return driver;
         }
+        */
 
+        /*
         [SetUp]
         public void InitDriver()
         {
@@ -34,5 +37,6 @@ namespace TestsProject
                 driver.Dispose();
             }
         }
+        */
     }
 }

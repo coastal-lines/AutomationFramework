@@ -7,13 +7,13 @@ namespace AutomationProjectQA.HelpMethods
     {
         public void RunJavaScript(string script)
         {
-            IJavaScriptExecutor js = (IJavaScriptExecutor) DriverClass.GetDriver();
+            IJavaScriptExecutor js = (IJavaScriptExecutor)StaticDriverClass.GetSeleniumChromeDriver();
             var result = (string) js.ExecuteScript(script);
         }
 
         public string RunJavaScriptAndGetResult(string script)
         {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)DriverClass.GetDriver();
+            IJavaScriptExecutor js = (IJavaScriptExecutor)StaticDriverClass.GetSeleniumChromeDriver();
             var result = (string)js.ExecuteScript(script);
 
             return result;

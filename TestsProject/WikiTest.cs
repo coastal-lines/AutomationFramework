@@ -1,6 +1,10 @@
-﻿using AutomationProjectQA.Wrapers;
+﻿using AutomationProjectQA.DriverCore.Driver;
+using AutomationProjectQA.FrameworkCore.Driver;
+using AutomationProjectQA.Wrapers;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace TestsProject
 {
@@ -9,22 +13,11 @@ namespace TestsProject
         [Test]
         public void JustTest()
         {
-            GetDriver().Navigate().GoToUrl("https://mail.rambler.ru/");
-            var login = new Element(By.Id("login"));
-            var password = new Element(By.Id("password"));
-            var enter = new Element(By.ClassName("rui-Button-content"));
-            SwitchToTheFirstIFrame();
-            login.Wait(WaitMethods.Wait).InstantiateElement().Click();
-            login.SetText("");
-            password.InstantiateElement().Click();
-            password.SetText("");
-            enter.InstantiateElement().Click();
-
-            var list = new ElementList(By.CssSelector("div[class='MailList-list-2L'] div[draggable='true']"));
-            WaitElement(list.GetByFromListElements());
-            Assert.IsTrue(list.GetElementList().Count > 10, "");
-
-
+            DriverInitiation.GetChromeDriver().Navigate().GoToUrl("https://www.udemy.com/");
+            var searchCourseInput = new Element(By.CssSelector("input[placeholder='Search for anything']"));
+            searchCourseInput.SetText("C# course");
+            var listCourses = new ElementList(By.CssSelector("//div[contains(@class, 'course-list--container')]//h3[@data-purpose='course-title-url']/a"));
+            Assert.IsTrue(listCourses.GetElementList().Where(c => c.GetText() == "Learn C# for Beginners Crash Course") != null, "error message");
         }
     }
 }
