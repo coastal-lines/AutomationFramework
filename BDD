@@ -1,0 +1,11 @@
+#get value from table by index:
+|Area|Expected Result|
+|    |               |
+
+private string GetFromTable(string value)
+{
+    var indexOfObject = _tableTC105123.Rows.Select(row => row["Area"]).ToList().IndexOf(value);
+    var text = table.Rows.Select(r => r["Expected Result"]).ToList()[indexOfObject];
+
+    return text;
+}
